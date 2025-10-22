@@ -42,6 +42,14 @@ Variabel yang dibutuhkan:
 - Objek yang sudah ada akan ditimpa (overwrite). Jika ingin skip, modifikasi kode dengan pengecekan `HeadObject`.
 - Pastikan izin jaringan keluar (egress) ke endpoint Wasabi tersedia.
 
+## Catatan CentOS
+
+- Biner Linux (amd64/arm64) kompatibel dengan CentOS 7/8/Stream.
+- Gunakan arsip: `s3-uploader-go-centos-amd64.tar.gz` atau `s3-uploader-go-centos-arm64.tar.gz`.
+- Instalasi sama dengan Ubuntu: ekstrak, `cd release`, lalu `sudo bash install.sh`.
+- Service menggunakan systemd, tersedia di CentOS 7/8/Stream.
+- Cek log: `journalctl -u s3-uploader -f`. Hapus service lewat langkah uninstall di atas.
+
 ## Instalasi sebagai service (Ubuntu)
 
 - Ekstrak arsip sesuai arsitektur dan masuk ke folder `release`.
